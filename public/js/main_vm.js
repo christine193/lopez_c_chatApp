@@ -20,9 +20,7 @@ function scrollDelay() {
 	setTimeout(updateScroll, 100);
 }
 
-function shakeContainer() {
-	document.getElementbyId("shakeBtn").className += "shake";
-}
+
 
 
 // create vue instance
@@ -51,8 +49,10 @@ const vm = new Vue({
 
 }).$mount(`#app`);
 
-socket.addEventListener('onClick', shakeContainer);
+
 socket.on('connected', logConnect);
 socket.addEventListener('chat message', appendMessage);
 socket.addEventListener('chat message', scrollDelay);
 socket.addEventListener('disconnect', appendMessage);
+
+

@@ -1,4 +1,5 @@
 /* reset */
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 * {
   margin: 0;
   padding: 0;
@@ -25,11 +26,30 @@ main {
   /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to left, #0575E6, #00F260);
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  overflow: hidden;
+  position: relative;
+}
+
+.title {
+  position: absolute;
+  color: #eee;
+  font-size: 40px;
+  font-family: "Pacifico", cursive;
+  font-weight: 100;
+  top: 300px;
+}
+
+.subTitle {
+  position: absolute;
+  color: #eee;
+  top: 370px;
 }
 
 .chatContainer {
-  min-width: 50%;
+  width: 80vw;
+  overflow: hidden;
   border-radius: 10px;
+  animation-delay: 1.2s;
   -webkit-box-shadow: 10px 10px 17px -3px rgba(0, 0, 0, 0.38);
   -moz-box-shadow: 10px 10px 17px -3px rgba(0, 0, 0, 0.38);
   box-shadow: 10px 10px 17px -3px rgba(0, 0, 0, 0.38);
@@ -56,7 +76,6 @@ main {
   background-color: #eee;
   height: 50vh;
   overflow-y: scroll;
-  overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -83,13 +102,17 @@ form input[type=submit] {
   border: none;
   width: auto;
   padding: 10px;
-  background-color: #4bc811;
+  background-color: #01dc77;
   margin-top: 1rem;
   border-radius: 10px;
   color: white;
   cursor: pointer;
   text-transform: uppercase;
   font-weight: bold;
+  transition: 500ms;
+}
+form input[type=submit]:hover {
+  background: #049abf;
 }
 
 #messages {
@@ -104,17 +127,18 @@ form input[type=submit] {
   background: #eee;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 570px) {
   .chatContainer {
-    min-width: 35%;
+    width: 550px;
   }
 }
 .new-message {
   width: 45%;
   padding: 8px 12px;
-  background-color: white;
+  background-color: #049abf;
   border-radius: 8px;
   margin-bottom: 1rem;
+  color: white;
   float: left;
   clear: both;
 }
@@ -126,7 +150,7 @@ form input[type=submit] {
 
 .my-message {
   float: right !important;
-  background-color: #86bf9d;
+  background-color: #01dc77;
   color: white;
 }
 

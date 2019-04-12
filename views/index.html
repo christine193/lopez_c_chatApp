@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Socket IO Chat with Node!</title>
+	<title>Christine's Super Great Chat App</title>
 
 	<link rel="stylesheet" href="css/main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
@@ -12,11 +12,12 @@
 </head>
 
 <body>
+
 	<main id="app">
-
-		<section class="chatContainer">
-
-
+		<h1 class="title">Chat App!</h1>
+		<p class="subTitle">A chat application using socket.io</p>
+		<section class="chatContainer animated fadeInUp">
+			<!--hold your horses-->
 			<section class="messages" id="msgs">
 				<ul id="messages" v-for="message in messages">
 					<newmessage :msg="message"></newmessage>
@@ -24,13 +25,14 @@
 				</ul>
 			</section>
 			<section class="form-container">
-				<label for="nickname">Your Nickname (optional)</label>
+				<label for="nickname"> Nickname:</label>
 				<input v-model="nickname" type="text" id="nickname" class="nickname"
 					placeholder="What is your nickname?">
 
 				<form>
-					<label for="message">Something to say?</label>
-					<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"></textarea>
+					<label for="message"> Message:</label>
+					<textarea v-model="message" class="message" type="text" autocomplete="off" id="textarea"
+						placeholder="Type a message.."></textarea>
 					<input type="submit" @click.prevent="dispatchMessage">
 
 

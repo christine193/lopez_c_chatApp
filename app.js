@@ -8,7 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/views/index.html');
+	res.sendFile(__dirname + '/views/index.html');
 });
 
 const server = app.listen(port, () => {
@@ -17,18 +17,18 @@ const server = app.listen(port, () => {
 
 io.attach(server);
 
-io.on('connection', function(socket) {
+io.on('connection', function (socket) {
 	console.log('a user has connected');
 	socket.emit('connected', { sID: `${socket.id}`, message: `new connection` });
 
 	// listen for incoming message from anyone connected to the app
-	socket.on('chat message', function(msg) {
+	socket.on('chat message', function (msg) {
 		console.log('message: ', msg, 'socket: ', socket.id);
 
 		io.emit('chat message', { id: `${socket.id}`, message: msg })
 	});
 
-	socket.on('disconnect', function() {
+	socket.on('disconnect', function () {
 		console.log('a user has disconnect');
 	});
 });

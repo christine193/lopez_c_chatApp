@@ -16,12 +16,16 @@
 	<main id="app">
 		<h1 class="title">Chat App!</h1>
 		<p class="subTitle">A chat application using socket.io</p>
+
+		<!--<div id="info" class=" animated fadeIn">
+			<h2>Online Users</h2>
+			<h2 id="usersConnected"></h2>
+		</div>-->
+
 		<section class="chatContainer animated fadeInUp">
-			<!--hold your horses-->
 			<section class="messages" id="msgs">
 				<ul id="messages" v-for="message in messages">
 					<newmessage :msg="message"></newmessage>
-					<p id="msgL"> </p>
 				</ul>
 			</section>
 			<section class="form-container">

@@ -7,3 +7,8 @@ A responsive chat application built with Socket.IO. Users are notified when a ne
 * [Socket.IO](https://socket.io/) - Dependency Management
 * [Animate.css](https://daneden.github.io/animate.css/) - CSS animations for animated messages
 * [Sass](https://sass-lang.com/) - Used to generate CSS 
+
+## Authors
+
+* **Christine Lopez** - [christine193](https://github.com/christine193)
+

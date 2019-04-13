@@ -30,6 +30,10 @@ main {
   position: relative;
 }
 
+#red {
+  color: red;
+}
+
 .title {
   position: absolute;
   color: #eee;
@@ -43,10 +47,19 @@ main {
   position: absolute;
   color: #eee;
   top: 370px;
+  font-size: 20px;
+}
+
+#info {
+  position: absolute;
+  color: white;
+  top: 25px;
+  font-size: 16px;
+  animation-delay: 2s;
 }
 
 .chatContainer {
-  width: 80vw;
+  width: 90vw;
   overflow: hidden;
   border-radius: 10px;
   animation-delay: 1.2s;
@@ -107,9 +120,8 @@ form input[type=submit] {
   border-radius: 10px;
   color: white;
   cursor: pointer;
-  text-transform: uppercase;
-  font-weight: bold;
   transition: 500ms;
+  font-weight: bold;
 }
 form input[type=submit]:hover {
   background: #049abf;

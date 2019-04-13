@@ -2,9 +2,10 @@ var express = require('express');
 var app = express();
 var io = require('socket.io')();
 
+
 const port = process.env.PORT || 3000;
 
-//tell express where our static files are _js, images, css, etc)
+//tell express where our static files are js, images, css, etc)
 app.use(express.static('public'));
 
 app.get('/', (req, res) => {

@@ -2,9 +2,12 @@ import ChatMessage from './modules/ChatMessage.js';
 
 const socket = io();
 
+
 function logConnect({ sID, message }) { // sID, message
 	console.log(sID, message);
 	vm.socketID = sID;
+	var liveUser = new Object();
+	socket.emit('chat message', { content: "A user has entered the chat", object: liveUser });
 }
 
 function appendMessage(message) {
@@ -19,8 +22,6 @@ function updateScroll() {
 function scrollDelay() {
 	setTimeout(updateScroll, 100);
 }
-
-
 
 
 // create vue instance

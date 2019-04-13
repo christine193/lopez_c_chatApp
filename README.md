@@ -5,7 +5,7 @@ A responsive chat application built with Socket.IO. Users are notified when a ne
 
 * [Vue](https://vuejs.org/v2/guide/) - Front-end web framework
 * [Socket.IO](https://socket.io/) - Dependency Management
-* [Animate.css](https://daneden.github.io/animate.css/) - CSS animations for animated messages
+* [Animate.css](https://daneden.github.io/animate.css/) - CSS animation library
 * [Sass](https://sass-lang.com/) - Used to generate CSS 
 
 ## Authors
